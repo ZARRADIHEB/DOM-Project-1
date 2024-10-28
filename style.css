@@ -81,9 +81,13 @@ img {
 .quantity-wrapper {
   display: flex;
   align-items: center;
-  button {
+  button:not(:last-child) {
     height: 25px;
     width: 28px;
+    font-size: x-large;
+    display: flex;
+    align-items: center;
+    justify-content: center;
     margin-inline: 7px;
     cursor: pointer;
     border: none;
@@ -94,7 +98,12 @@ img {
 span {
   font-size: 1.5em;
 }
-i {
+button#like,
+button#heart {
+  background-color: transparent;
+  border: none;
+}
+svg {
   font-size: 1.5em;
   margin-left: 20px;
   cursor: pointer;
@@ -144,6 +153,7 @@ i {
   }
 }
 
-.liked {
-  background-color: red; /* Liked color */
+#productPrice {
+  font-size: 1.5em;
+  color: #444;
 }

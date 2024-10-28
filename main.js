@@ -1,35 +1,33 @@
 function plus() {
-  let plusButtons = document.querySelectorAll('#plus');
-  plusButtons.forEach((button, index) => {
-      button.addEventListener('click', function() {
-          let quantityElement = document.querySelectorAll('#quantity')[index];
-          let quantity = parseInt(quantityElement.innerText);
-          quantity++;
-          quantityElement.innerText = quantity;
-      });
-  });
+  let plusBtn = document.getElementsByClassName('plus');
+  let value = document.getElementById('quantity')
+  for (let i = 0; i < plusBtn.length; i++) {
+    plusBtn[i].value = parseInt(plusBtn[i].value || 0) + 1;
+  }
+  value.innerText = plusBtn[i].value
 }
-plus();
 
-function minus() {
-  for (let i = 1; i <= 3; i++) {
-      let minusButton = document.getElementById(`minus-${i}`);
-      minusButton.addEventListener('click', function() {
-          let quantityElement = document.getElementById(`quantity-${i}`);
-          let quantity = parseInt(quantityElement.innerText);
-          if (quantity > 1) {
-              quantity--;
-              quantityElement.innerText = quantity;
-          }
-      });
+
+
+
+
+function like() {
+  var likeBtn = document.getElementById('like')
+  if( likeBtn.style.color == "red") {
+    likeBtn.style.color = ""
+  }
+  else {
+    likeBtn.style.color = "red"
   }
 }
 
-minus();
 
-
-document.querySelectorAll(".like").forEach((icon) => {
-  icon.addEventListener("click", () => {
-      icon.classList.toggle("liked"); // Toggle the "liked" class
-  });
-});
+function heart() {
+  var heart = document.getElementById('heart')
+  if( heart.style.color == "red") {
+    heart.style.color = ""
+  }
+  else {
+    heart.style.color = "red"
+  }
+}

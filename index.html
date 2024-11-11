@@ -2,70 +2,27 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Best Cart</title>
-    <link rel="stylesheet" href="style.css" />
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
-      integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg=="
-      crossorigin="anonymous"
-      referrerpolicy="no-referrer"
-    />
+    <title>Shopping Cart</title>
+    <link rel="stylesheet" href="styles.css" />
   </head>
   <body>
-    <div class="wrapper">
-      <div class="container">
-        <h1 class="title">Best Cart</h1>
-        <!-- Item 1 -->
-        <div class="item item1">
-          <div class="img-wrapper">
-            <img src="./Images/item1.jpg" alt="" />
-          </div>
-          <div class="quantity-wrapper">
-            <button id="minus">-</button>
-            <span id="quantity">1</span>
-            <button onclick="plus()" class="plus">+</button>
-            <button id="like" onclick="like()">
-              <i class="fa-solid fa-heart"></i>
-            </button>
-          </div>
-          <div class="unit-price">
-            <div id="productPrice">$ 50</div>
-          </div>
-        </div>
-        <!-- Item 2 -->
-        <div class="item item2">
-          <div class="img-wrapper">
-            <img src="./Images/item2.jpg" alt="" />
-          </div>
-          <div class="quantity-wrapper">
-            <button id="minus">-</button>
-            <span id="quantity">1</span>
-            <button class="plus">+</button>
-            <button id="heart" onclick="heart()">
-              <i class="fa-solid fa-heart"></i>
-            </button>
-          </div>
-          <div class="unit-price">
-            <div id="productPrice">$ 70</div>
-          </div>
-        </div>
-        <div class="total-price">
-          <span id="totalPrice">Total Price : </span
-          ><span id="finalPrice">$0</span>
-        </div>
-        <div class="checkout-btn">
-          <button>Checkout</button>
-        </div>
-      </div>
-    </div>
-    <script src="main.js"></script>
-    <script
-      src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/js/all.min.js"
-      integrity="sha512-6sSYJqDreZRZGkJ3b+YfdhB3MzmuP9R7X1QZ6g5aIXhRvR1Y/N/P47jmnkENm7YL3oqsmI6AK+V6AD99uWDnIw=="
-      crossorigin="anonymous"
-      referrerpolicy="no-referrer"
-    ></script>
+    <header>
+      <h1>Modern Online Store</h1>
+    </header>
+    <main>
+      <section id="products">
+        <h2>Products</h2>
+        <div class="product-list"></div>
+      </section>
+      <section id="cart">
+        <h2>Shopping Cart</h2>
+        <div class="cart-list"></div>
+        <div class="cart-total">Total: $0.00</div>
+      </section>
+    </main>
+    <footer>
+      <p>&copy; 2024 Modern Online Store</p>
+    </footer>
+    <script src="script.js"></script>
   </body>
 </html>
